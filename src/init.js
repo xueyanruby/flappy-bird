@@ -50,6 +50,7 @@ function renderGame()
 
   if(iscollision())
   {
+    drop = true ;
     Game.birdcanvas.removeEventListener("click",canvasClick,true);
     Game.stopAnimation = true ;
     window.requestAnimationFrame(function(){
@@ -155,7 +156,7 @@ function canvasClick(evt)
 function renderBirdFly()
 {
   var context = Game.birdcanvas.getContext("2d");
-  if(y > h)
+  if((!drop)&&(y > h))
   {
 	 context.clearRect(100,y,64, 50);
      y = y-4;
