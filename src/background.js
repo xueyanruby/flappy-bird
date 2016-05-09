@@ -9,7 +9,7 @@ function setBackground()
   Game.backgroundcanvas.style.background = "#71c5cf";
   var cvs = Game.backgroundcanvas.getContext("2d");
 
-//°×ÔÆ
+//ç™½äº‘
   cvs.translate(0,Game.canvas.height-200);
   cvs.fillStyle = "#e9fad8";
   
@@ -25,7 +25,7 @@ function setBackground()
   }
   cvs.fillRect(0,80,Game.canvas.width,70);
 
- //·¿×Ó
+ //æˆ¿å­
   var maxheight = 80 ;
   var minheight = 40 ;
   var maxwidth = 40;
@@ -52,28 +52,43 @@ function setBackground()
     cvs.fillRect(i,(maxheight-h),w,h);
 	cvs.strokeRect(i,(maxheight-h),w,h);
   }
- //²İÆº
+ //è‰åª
    cvs.fillStyle = "#81e18b";
    cvs.fillRect(0,80,Game.canvas.width,40);
 
- //Ê÷
+ //æ ‘
    var maxtreeheight = 50 ;
    var mintreeheight = 30 ;
    var maxh = 110 ;
    var minh = 85 ;
 
- //É³Ì²
+ //æ²™æ»©
    cvs.fillStyle = "#dcd795";
    cvs.fillRect(0,120,Game.canvas.width,10);
   Game.canvascontainer.appendChild(Game.backgroundcanvas);
 }
 
+function createGameOverLogo()
+{
+   var gameoverlogo = document.createElement("canvas");
+   var cvs =  gameoverlogo.getContext("2d");
+   ctx.font="30px Verdana";
+  // åˆ›å»ºæ¸å˜
+  var gradient=ctx.createLinearGradient(0,0,c.width,0);
+  gradient.addColorStop("0","magenta");
+  gradient.addColorStop("0.5","blue");
+  gradient.addColorStop("1.0","red");
+  // ç”¨æ¸å˜å¡«è‰²
+   ctx.fillStyle=gradient;
+   ctx.fillText("Game Over!",10,90);
+   return gameoverlogo ;
+}
 
 function createGround()
 {
   var x = 3 ;
   var y = 0 ;
-  var h = Game.canvas.height -260 ;//Á½¸ùÖù×ÓÉÏÏÂ¼ä¾à150
+  var h = Game.canvas.height -260 ;//ä¸¤æ ¹æŸ±å­ä¸Šä¸‹é—´è·150
   var minh = 30 ;
   var maxh = h-30 ;
   var th =  minh+(maxh-minh)*Math.random() ;
