@@ -145,16 +145,16 @@ function createScrollBar()
 
 	var w = 5 ;
 	var h = 10 ;
-    for(var x =0 ; x<=Game.canvas.width+2.5*w;x=x+2.5*w)
+         for(var x =0 ; x<=Game.canvas.width+2.5*w;x=x+2.5*w)
 	{
 	  var grd=cvs.createLinearGradient(x,0,x, h);
-      grd.addColorStop(0,groundLightGreen);
-      grd.addColorStop(0.5,groundDarkGreen);
-      grd.addColorStop(1,groundLightGreen);
+          grd.addColorStop(0,groundLightGreen);
+          grd.addColorStop(0.5,groundDarkGreen);
+          grd.addColorStop(1,groundLightGreen);
 
 	  cvs.fillStyle = grd ;
 	  cvs.beginPath();
-      cvs.moveTo(x,0);
+          cvs.moveTo(x,0);
 	  cvs.lineTo(x+w,0);
 	  cvs.lineTo(x+w/2,h);
 	  cvs.lineTo(x-w/2,h);
@@ -162,12 +162,12 @@ function createScrollBar()
 	  cvs.fill();
 
 	  grd=cvs.createLinearGradient(x+w,0,x+w, h);
-      grd.addColorStop(0,groundDarkGreen);
-      grd.addColorStop(0.5,groundDarkerGreen);
-      grd.addColorStop(1,groundDarkGreen);
+          grd.addColorStop(0,groundDarkGreen);
+          grd.addColorStop(0.5,groundDarkerGreen);
+          grd.addColorStop(1,groundDarkGreen);
 	  cvs.fillStyle = grd ;
 	  cvs.beginPath();
-      cvs.moveTo(x+w,0);
+          cvs.moveTo(x+w,0);
 	  cvs.lineTo(x+2.5*w,0);
 	  cvs.lineTo(x+w*2,h);
 	  cvs.lineTo(x+w/2,h);
