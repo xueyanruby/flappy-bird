@@ -73,7 +73,7 @@ function renderGameOver()
    context.drawImage(Game.gameoverlogo,250,100);
      
   context = Game.birdcanvas.getContext("2d")
-  context.clearRect(100,y,64, 50);
+  context.clearRect(100,y-4,68, 50);
   var img = document.createElement("img");
   img.src= "images/bird2.png";
   context.drawImage(img, 100,y);
