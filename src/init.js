@@ -50,9 +50,9 @@ function renderGame()
 
   if(iscollision())
   {
-    Game.stopAnimation = true ;
     Game.birdcanvas.removeEventListener("click",canvasClick,true);
-	window.requestAnimationFrame(function(){
+    Game.stopAnimation = true ;
+    window.requestAnimationFrame(function(){
       renderGameOver();
     }, Game.canvas);
   }
