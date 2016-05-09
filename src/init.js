@@ -27,6 +27,7 @@ window.onload = function(){
   Game.birdcanvas.width = 800 ;
   Game.birdcanvas.height = 623 ;
 
+  Game.gameoverlogo = createGameOverLogo();
   Game.stopAnimation = false ;
  window.requestAnimationFrame(function(){
    renderGame();
@@ -68,7 +69,8 @@ function renderGameOver()
   context.clearRect(0,0,Game.canvas.width, Game.canvas.height);
    context.drawImage(Game.ground2,Game.canvas.width-x2,0);
    context.drawImage(Game.ground1,Game.canvas.width-x1,0);
-
+   context.drawImage(Game.gameoverlogo,300,100);
+     
   context = Game.birdcanvas.getContext("2d")
   context.clearRect(0,0,Game.canvas.width, Game.canvas.height);
   var img = document.createElement("img");
