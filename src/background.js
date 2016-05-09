@@ -72,7 +72,7 @@ function createGameOverLogo()
 {
    var gameoverlogo = document.createElement("canvas");
    var cvs =  gameoverlogo.getContext("2d");
-   cvs.font="30px Verdana";
+   cvs.font="50px Verdana";
   // 创建渐变
   var gradient=cvs.createLinearGradient(0,0,Game.canvas.width,0);
   gradient.addColorStop("0","magenta");
