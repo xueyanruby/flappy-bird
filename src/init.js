@@ -69,7 +69,7 @@ function renderGameOver()
   context.clearRect(0,0,Game.canvas.width, Game.canvas.height);
    context.drawImage(Game.ground2,Game.canvas.width-x2,0);
    context.drawImage(Game.ground1,Game.canvas.width-x1,0);
-   context.drawImage(Game.gameoverlogo,300,100);
+   context.drawImage(Game.gameoverlogo,250,100);
      
   context = Game.birdcanvas.getContext("2d")
   context.clearRect(0,0,Game.canvas.width, Game.canvas.height);
