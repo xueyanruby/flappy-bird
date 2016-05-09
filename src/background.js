@@ -72,15 +72,15 @@ function createGameOverLogo()
 {
    var gameoverlogo = document.createElement("canvas");
    var cvs =  gameoverlogo.getContext("2d");
-   ctx.font="30px Verdana";
+   cvs.font="30px Verdana";
   // 创建渐变
   var gradient=ctx.createLinearGradient(0,0,c.width,0);
   gradient.addColorStop("0","magenta");
   gradient.addColorStop("0.5","blue");
   gradient.addColorStop("1.0","red");
   // 用渐变填色
-   ctx.fillStyle=gradient;
-   ctx.fillText("Game Over!",10,90);
+   cvs.fillStyle=gradient;
+   cvs.fillText("Game Over!",10,90);
    return gameoverlogo ;
 }
 
