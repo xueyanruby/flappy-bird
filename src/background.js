@@ -74,13 +74,13 @@ function createGameOverLogo()
    var cvs =  gameoverlogo.getContext("2d");
    cvs.font="30px Verdana";
   // 创建渐变
-  var gradient=cvs.createLinearGradient(0,0,c.width,0);
+  var gradient=cvs.createLinearGradient(0,0,Game.canvas.width,0);
   gradient.addColorStop("0","magenta");
   gradient.addColorStop("0.5","blue");
   gradient.addColorStop("1.0","red");
   // 用渐变填色
    cvs.fillStyle=gradient;
-   cvs.fillText("Game Over!",10,90);
+   cvs.fillText("Game Over!",0,90);
    return gameoverlogo ;
 }
 
