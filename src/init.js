@@ -171,9 +171,9 @@ function renderBirdFly()
 
 function iscollision()
 {
-	  if((Game.canvas.width-x1 >30)&&(Game.canvas.width-x1 <159)&&((y <=Game.ground1h+49)||(y >=(Game.ground1h+150)))){
+	  if((Game.canvas.width-x1 >30)&&(Game.canvas.width-x1 <159)&&((y <=Game.ground1h+30)||(y >=(Game.ground1h+130)))){
           return true ;
-	  }else if((Game.canvas.width-x2 >30)&&(Game.canvas.width-x2 <159)&&((y <=Game.ground2h+49)||(y >=(Game.ground2h+150)))){
+	  }else if((Game.canvas.width-x2 >30)&&(Game.canvas.width-x2 <159)&&((y <=Game.ground2h+30)||(y >=(Game.ground2h+130)))){
           return true ;
 	  }else{
 		  return false;
